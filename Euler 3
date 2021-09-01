@@ -1,0 +1,23 @@
+using System;
+
+namespace Prj_Euler3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            long n = 600851475143;
+            double m = Math.Sqrt(n);
+            int a = 0;
+            for (int i = 3; i < m; i += 2)  // i+=2 checks for all odd numbers. n is not even so i dont need to check for 2. This is not a sophisticated approach but it gets the job done with fewer lines of code in this case. 
+            {                               // Also, I don't check if n is divisble by i multiple times because this is not required. I would write different code if I would need to find all divisors of a number.
+                if (n % i == 0) 
+                {
+                    a = i;
+                    n /= i;
+                }
+            }
+            Console.WriteLine(a);
+        }
+    }
+}
