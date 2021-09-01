@@ -1,0 +1,30 @@
+using System;
+
+namespace Prj_Euler2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 1;  // fibonacci 2nd term
+            int j = 0;  // fibonacci previous term
+            int h = 1;  // to count every 3 terms
+            int a = 0;  // to store the sum
+            for (i = 1; i < 4000000; i+=j)
+            {
+                if (h == 2)
+                {
+                    a += i;
+                    h = 0;
+                }
+                else
+                {
+                    h++;
+                }
+                j = i - j;
+            }
+            Console.WriteLine("Sum of all even terms: "+a);
+            Console.ReadLine();
+        }
+    }
+}
