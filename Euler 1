@@ -1,0 +1,25 @@
+using System;
+
+namespace prj_euler1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 0;
+            for (int i=3; i<1000; i+=3)
+            {
+                if (i % 15 != 0)
+                {
+                    a += i;
+                }
+            }
+            for (int j = 5; j < 1000; j += 5)
+            {
+                a += j;
+            }
+            Console.WriteLine(a);
+            Console.ReadLine();
+        }
+    }
+}
