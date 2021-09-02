@@ -23,12 +23,12 @@ namespace Prj_Euler4
                     palin += list1[j];
                 }
                 int palinint = Convert.ToInt32(palin);
-                for (int k = 101; k < Math.Sqrt(palinint); k++) 
+                for (int k = 999; k > 101; k--) 
                 {
                     if (palinint % k == 0 & palinint/k < 999) 
                     { 
                         answer = palinint;
-                        k = 999; i = 99;
+                        k = 1; i = 1;
                     }
                 }
             }
