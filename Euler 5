@@ -10,7 +10,7 @@ namespace Prj_Euler5
         {
             BigInteger answer = 1;
             List<int> divisors = new List<int>();
-            int max = 20;
+            int max = 500;
             for (int i = 2; i < max + 1; i++) 
             {
                 int num = i;
@@ -28,7 +28,6 @@ namespace Prj_Euler5
             }
             foreach (int b in divisors) 
             {
-                Console.WriteLine(b);
                 answer *= b;
             }
             Console.WriteLine(answer);
