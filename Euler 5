@@ -10,7 +10,7 @@ namespace Prj_Euler5
         {
             BigInteger answer = 1;
             List<int> divisors = new List<int>();
-            int max = 50;
+            int max = 20;
             for (int i = 2; i < max + 1; i++) 
             {
                 int num = i;
