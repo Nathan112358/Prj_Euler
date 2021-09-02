@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+
+namespace Prj_Euler4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int answer = 0;
+            for (int i = 997; i>100; i--) 
+            {
+                string numstr = ""+i+"";
+                string palin = numstr;
+                List<string> list1 = new List<string>();
+                foreach (char a in numstr)
+                {
+                    string convertChar = "" + a + "";
+                    list1.Add(convertChar);
+                }
+                for(int j = 2; j >= 0; j--)
+                {
+                    palin += list1[j];
+                }
+                int palinint = Convert.ToInt32(palin);
+                for (int k = 101; k < Math.Sqrt(palinint); k++) 
+                {
+                    if (palinint % k == 0 & palinint/k < 999) 
+                    { 
+                        answer = palinint;
+                        k = 999; i = 99;
+                    }
+                }
+            }
+            Console.WriteLine(answer);
+            Console.ReadLine();
+        }
+    }
+}
