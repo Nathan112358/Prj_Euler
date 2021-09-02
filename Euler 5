@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Numerics;
 
 namespace Prj_Euler5
 {
@@ -7,9 +8,9 @@ namespace Prj_Euler5
     {
         static void Main(string[] args)
         {
-            int answer = 1;
+            BigInteger answer = 1;
             List<int> divisors = new List<int>();
-            int max = 20;
+            int max = 50;
             for (int i = 2; i < max + 1; i++) 
             {
                 int num = i;
@@ -27,6 +28,7 @@ namespace Prj_Euler5
             }
             foreach (int b in divisors) 
             {
+                Console.WriteLine(b);
                 answer *= b;
             }
             Console.WriteLine(answer);
