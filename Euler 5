@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+
+namespace Prj_Euler5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int answer = 1;
+            List<int> divisors = new List<int>();
+            int max = 20;
+            for (int i = 2; i < max + 1; i++) 
+            {
+                int num = i;
+                foreach (int a in divisors) 
+                {
+                    if(num % a == 0) 
+                    {
+                        num /= a;
+                    }
+                }
+                if (num != 1)
+                { 
+                    divisors.Add(num);
+                }    
+            }
+            foreach (int b in divisors) 
+            {
+                answer *= b;
+            }
+            Console.WriteLine(answer);
+        }
+    }
+}
