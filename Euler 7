@@ -7,7 +7,7 @@ namespace Prj_Euler7
         static void Main(string[] args)
         {
             int primeMax = 1000000;
-            bool[] primes = new bool[1000000];
+            bool[] primes = new bool[primeMax];
             for (int i = 0; i < primeMax; i++) 
             {
                 primes[i] = true;
