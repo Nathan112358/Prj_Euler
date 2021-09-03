@@ -1,0 +1,33 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double _sum = SumOfSquares(1, 100);
+            double _square = SquareOfSum(1, 100);
+            Console.WriteLine(Math.MaxMagnitude(_sum,_square)- Math.MinMagnitude(_sum, _square));
+        }
+        static double SumOfSquares(int _start, int _end)
+        {
+            double _return = 0;
+            for (int i = _start; i <= _end; i++) 
+            {
+                _return += Math.Pow(i, 2);
+            }
+            return _return;
+        }
+        static double SquareOfSum(int _start, int _end) 
+        {
+            double _return = 0;
+            for (int i = _start; i <= _end; i++) 
+            {
+                _return += i;
+            }
+            _return = Math.Pow(_return, 2);
+            return _return;
+        }
+    }
+}
